@@ -77,7 +77,7 @@ export default function HeroSection() {
               href="/become-seller"
               className={buttonVariants({
                 size: "lg",
-                variant: "bordered",
+                variant: "outline",
                 className: "border border-white text-white hover:bg-pink-200/30 duration-200 px-8 rounded-full"
               })}
             >
