@@ -3,6 +3,7 @@
 import { Button } from "@heroui/react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { buttonVariants } from "@heroui/styles";
 
 export default function HeroSection() {
   return (
@@ -65,27 +66,23 @@ export default function HeroSection() {
             transition={{ delay: 0.4 }}
             className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <Button
-              as={Link}
+            <Link
               href="/products"
-              size="lg"
-              color="secondary"
-              radius="full"
-              className="font-semibold px-8"
+              className="inline-flex items-center justify-center font-semibold px-8 h-12 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition-colors"
             >
               Explore Products
-            </Button>
+            </Link>
 
-            <Button
-              as={Link}
+            <Link
               href="/become-seller"
-              size="lg"
-              variant="bordered"
-              radius="full"
-              className="border border-white text-white hover:bg-pink-200/30 duration-200 px-8"
+              className={buttonVariants({
+                size: "lg",
+                variant: "bordered",
+                className: "border border-white text-white hover:bg-pink-200/30 duration-200 px-8 rounded-full"
+              })}
             >
               Become a Seller
-            </Button>
+            </Link>
           </motion.div>
 
           {/* Stats */}
